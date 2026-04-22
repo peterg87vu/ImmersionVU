@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immersion Story Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+  <div class="app-shell">
+    <aside class="left-panel">
+      <a class="back-link" href="index.html">← Home</a>
+      <p class="eyebrow dark">Sandbelt Story Map</p>
+      <h1 class="panel-title">The Melbourne Sandbelt</h1>
+      <p class="panel-copy">Click a stop to move around the courses of the Sandbelt and learn more about them.
+      <div class="summary-bar">
+        <div>
+          <span class="summary-label">Stops</span>
+          <strong id="summary-stops">0</strong>
+        </div>
+        <div>
+          <span class="summary-label">Theme</span>
+          <strong id="summary-theme">Field Notes</strong>
+        </div>
+      </div>
+      <div id="stop-list" class="stop-list"></div>
+    </aside>
+
+    <section class="map-area">
+      <div id="map"></div>
+      <div class="map-topbar">
+        <div>
+          <div class="map-kicker">Interactive Map</div>
+          
+        </div>
+        <button id="fit-route" class="ghost-button">Fit route</button>
+      </div>
+    </section>
+
+    <aside id="story-panel" class="story-panel">
+      <div class="story-head">
+        <div>
+          <div id="story-date" class="story-date"></div>
+          <h2 id="story-title"></h2>
+          <p id="story-subtitle" class="story-subtitle"></p>
+        </div>
+      </div>
+
+      <div class="story-meta-row">
+        <div class="meta-chip">
+          <span>Location</span>
+          <strong id="story-location"></strong>
+        </div>
+        
+      </div>
+
+      <div class="gallery-shell">
+        <img id="featured-image" class="featured-image" alt="Featured location image" />
+        <div id="thumb-strip" class="thumb-strip"></div>
+      </div>
+
+      <div id="story-tags" class="story-tags"></div>
+      <div id="story-body" class="story-body"></div>
+
+      <blockquote id="story-quote" class="story-quote"></blockquote>
+    </aside>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
